@@ -1,0 +1,13 @@
+<h1>Members Only Posts</h1>
+
+<ul>
+    <% @posts.each do |post| %>
+        <li> <%= link_to post.title, post %> </li>
+    <% end %>
+</ul>
+
+<%= link_to "Create Post", new_post_path %>
+<% if alert %>
+    <p> <%= alert %> </p>
+<% end %>
+<%= link_to "Log-in", root_path %>
